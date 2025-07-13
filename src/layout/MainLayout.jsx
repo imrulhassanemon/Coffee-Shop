@@ -10,7 +10,7 @@ const MainLayout = () => {
             <Navbar></Navbar>
             {/* Dynamic Route */}
 
-            <div className='min-h-[calc(100vh-289px)] py-12'>
+            <div className='min-h-[calc(100vh-289px)] py-12 container mx-auto'>
                 <Outlet></Outlet>
             </div>
 
