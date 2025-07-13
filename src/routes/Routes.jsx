@@ -2,12 +2,29 @@ import React from 'react'
 import { createBrowserRouter } from 'react-router-dom';
 import App from '../App'
 import MainLayout from '../layout/MainLayout';
+import Home from '../pages/Home';
+import Coffes from '../pages/Coffes';
+import Dashboard from '../pages/Dashboard';
 
 
 const Routes = createBrowserRouter([
     {
         path:'/',
-        element: <MainLayout></MainLayout>
+        element: <MainLayout></MainLayout>,
+        children:[
+            {
+                path:'/',
+                element: <Home></Home>
+            },
+            {
+                path:'/coffees',
+                element:<Coffes></Coffes>
+            },
+            {
+                path:'/dashboard',
+                element:<Dashboard></Dashboard>
+            }
+        ]
     }
 ])
 
