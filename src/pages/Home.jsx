@@ -17,7 +17,6 @@ const Home = () => {
             <Heading title={"Browse Coffees by Category"} subtitle={"Chose your desired coffee categroy to browse through specific coffees that fit your test"}></Heading>
             {/* Category Tab section */}
             <Categories categories={category}></Categories>
-            <h1>hello</h1>
             {/* Dynamic nested Component */}
             <Outlet></Outlet>
         </div>

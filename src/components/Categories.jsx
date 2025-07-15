@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Links, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Categories = ({ categories }) => {
   console.log(categories);
@@ -8,13 +8,13 @@ const Categories = ({ categories }) => {
       {/* name of each tab group should be unique */}
       <div className="tabs tabs-lift">
         {
-            categories.map(category => <Link to={`/category/${category.category}`} key={category.category}
+            categories.map(category => <NavLink to={`/category/${category.category}`} key={category.category}
           type="radio"
           name="my_tabs_3"
-          className="tab w-1/3 text-2xl"
+          className={({isActive})=> `tab w-1/3 text-[14px] lg:text-2xl ${isActive?'tab-active': ''}`}
           aria-label={category.category}> {category.category}
             
-        </Link>)
+        </NavLink>)
         }
         
       </div>

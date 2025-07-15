@@ -19,10 +19,15 @@ const Routes = createBrowserRouter([
                 loader: ()=> fetch('../categories.json'),
                 children: [
                     {
+                        path:'/',
+                        element: <CoffeeCart></CoffeeCart>,
+                        loader: ()=> fetch('../coffees.json')
+                    },
+                    {
                         path:'/category/:category',
                         element: <CoffeeCart></CoffeeCart>,
                         loader: ()=> fetch('../coffees.json')
-                    }
+                    },
                 ]
             },
             {
