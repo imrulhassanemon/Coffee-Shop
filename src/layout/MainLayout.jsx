@@ -7,10 +7,12 @@ const MainLayout = () => {
     return (
         <div>
             {/* navbar */}
-            <Navbar></Navbar>
+            <div className='h-16'>
+                <Navbar></Navbar>
+            </div>
             {/* Dynamic Route */}
 
-            <div className='min-h-[calc(100vh-289px)] py-12 container mx-auto'>
+            <div className='min-h-[calc(100vh-289px)] my-12 container mx-auto'>
                 <Outlet></Outlet>
             </div>
 

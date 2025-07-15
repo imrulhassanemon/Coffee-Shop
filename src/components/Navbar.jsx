@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-white/30 shadow-sm z-10 fixed backdrop-blur-2xl">
+    <div className="navbar bg-white/30 px-12 shadow-sm z-10 fixed backdrop-blur-2xl">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -28,7 +28,7 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <NavLink className={({isActive})=>`font-bold ${isActive?'text-warning': 'hover:text-warning'}`} to={"/"}>Home</NavLink>
-            <NavLink className={({isActive})=>`font-bold ${isActive?'text-warning': 'hover:text-warning'}`} to={"/coffees"}>Coffee</NavLink>
+            <NavLink className={({isActive})=>`font-bold ${isActive?'text-warning': 'hover:text-warning'}`} to={"/coffees"}>Coffees</NavLink>
             <NavLink className={({isActive})=>`font-bold ${isActive?'text-warning': 'hover:text-warning'}`} to={"/dashboard"}>Home</NavLink>
           </ul>
         </div>
@@ -39,7 +39,7 @@ const Navbar = () => {
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-8">
           <NavLink className={({isActive})=>`font-bold ${isActive?'text-warning': 'hover:text-warning'}`} to={"/"}>Home</NavLink>
-          <NavLink className={({isActive})=>`font-bold ${isActive?'text-warning': 'hover:text-warning'}`} to={"/coffees"}>Coffee</NavLink>
+          <NavLink className={({isActive})=>`font-bold ${isActive?'text-warning': 'hover:text-warning'}`} to={"/coffees"}>Coffees</NavLink>
           <NavLink className={({isActive})=>`font-bold ${isActive?'text-warning': 'hover:text-warning'}`} to={"/dashboard"}>Dashboard</NavLink>
         </ul>
       </div>

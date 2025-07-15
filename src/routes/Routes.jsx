@@ -1,11 +1,11 @@
 import React from 'react'
 import { createBrowserRouter } from 'react-router-dom';
-import App from '../App'
 import MainLayout from '../layout/MainLayout';
 import Home from '../pages/Home';
 import Coffes from '../pages/Coffes';
 import Dashboard from '../pages/Dashboard';
 import CoffeeCart from '../components/CoffeeCart';
+import CofeeDetails from '../pages/CofeeDetails';
 
 
 const Routes = createBrowserRouter([
@@ -38,6 +38,10 @@ const Routes = createBrowserRouter([
             {
                 path:'/dashboard',
                 element:<Dashboard></Dashboard>
+            },
+            {
+                path: '/coffee/:id',
+                element: <CofeeDetails></CofeeDetails>
             }
         ]
     }

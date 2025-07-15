@@ -8,7 +8,7 @@ const Card = ({ coffee }) => {
     coffee || {};
 
   return (
-      <Link
+      <Link to={`/coffee/${id}`}
       className="transition hover:scale-105 flex justify-center"
       >
         <div className="card bg-base-100 my-0 w-80 shadow-sm">
