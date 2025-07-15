@@ -8,8 +8,10 @@ const Card = ({ coffee }) => {
     coffee || {};
 
   return (
-      <Link>
-        <div className="card bg-base-100 my-0 w-full shadow-sm">
+      <Link
+      className="transition hover:scale-105 flex justify-center"
+      >
+        <div className="card bg-base-100 my-0 w-80 shadow-sm">
           <figure>
             <img src={image} alt="Coffees" />
           </figure>
