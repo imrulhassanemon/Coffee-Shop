@@ -1,5 +1,5 @@
 import React from 'react'
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, useLoaderData } from 'react-router-dom';
 import MainLayout from '../layout/MainLayout';
 import Home from '../pages/Home';
 import Coffes from '../pages/Coffes';
@@ -41,8 +41,9 @@ const Routes = createBrowserRouter([
             },
             {
                 path: '/coffee/:id',
-                element: <CofeeDetails></CofeeDetails>
-            }
+                element: <CofeeDetails></CofeeDetails>,
+                loader: ()=> fetch(`../coffees.json`)
+                     }
         ]
     }
 ])
